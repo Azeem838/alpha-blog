@@ -50,7 +50,7 @@
             aria-haspopup="true"
             aria-expanded="false"
           >
-            <%= "(Admin)" if current_user.admin? %> Profile [<%= current_user.username %>]
+            <%= "(Admin)" if current_user && current_user.admin? %> Profile [<%= current_user.username %>]
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <%= link_to "View your profile", user_path(current_user), class: "dropdown-item" %>
